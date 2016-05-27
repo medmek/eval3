@@ -8,6 +8,7 @@
 <head>
 
     <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
     <script src="scripts/app.js"></script>
 
     <!-- BEGIN META SECTION -->
@@ -28,7 +29,7 @@
 
 <body ng-app="myApp" data-page="panels">
     <!-- BEGIN TOP MENU -->
-    <div ng-include="'top_menu.html'"></div>
+    <div ng-include="'top_menu.html'" ng-controller="AccueilCtrl"></div>
     <!-- END TOP MENU -->
     <!-- BEGIN WRAPPER -->
     <div id="wrapper">
@@ -36,7 +37,7 @@
         <div ng-include="'sidebar.html'"></div>
         <!-- END MAIN SIDEBAR -->
         <!-- BEGIN MAIN CONTENT -->
-        <div ng-include="'accueil.html'"></div>
+       	<div ng-view></div>
         <!-- END MAIN CONTENT -->
     </div>
     <!-- END WRAPPER -->

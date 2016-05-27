@@ -2,42 +2,28 @@
     <div id="main-menu">
         <ul class="sidebar-nav">
             <li>
-                <a href="index.html"><i class="glyphicon glyphicon-home"></i><span class="sidebar-text">Accueil</span></a>
+                <a href="#/"><i class="glyphicon glyphicon-home"></i><span class="sidebar-text">Accueil</span></a>
             </li>
             <li>
-                <a href="projets.html"><i class="fa fa-dashboard"></i><span class="sidebar-text">Projets</span><span class="fa arrow"></span></a>
-                 <ul class="submenu collapse">
+                <a href=""><i class="fa fa-dashboard"></i><span class="sidebar-text">Projets</span>
+                <span class="fa arrow"></span></a>
+                 <!-- <ul class="submenu collapse"> le collapse ne marche pas avec angular routing-->
+                 <ul class="submenu">
                     <li>
-                        <a href="projets.html"><span class="sidebar-text">Par défaut</span></a>
+                        <a href="#/projets"><span class="sidebar-text">Tableau de Bord</span></a>
                     </li>
                     <li>
-                        <a href="projets_ajout.html"><span class="sidebar-text">Formulaire d'ajout</span></a>
-                    </li>
-                    <li>
-                        <a href="file_upload.html"><span class="sidebar-text">Uploader un fichier</span></a>
+                        <a href="#/projets/ajout"><span class="sidebar-text">Formulaire d'Ajout</span></a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Account</span><span class="fa arrow"></span></a>
-                  <ul class="submenu collapse">
+                <a href=""><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Account</span><span class="fa arrow">
+                </span></a>
+                  <!-- <ul class="submenu collapse"> le collapse ne marche pas avec angular routing-->
+                 <ul class="submenu">
                     <li>
-                        <a href="profil.html"><span class="sidebar-text">User Profile</span></a>
-                    </li>
-                    <li>
-                        <a href="login.html"><span class="sidebar-text">Login</span></a>
-                    </li>
-                    <li>
-                        <a href="signup.html"><span class="sidebar-text">Signup</span></a>
-                    </li>
-                    <li>
-                        <a href="password_forgot.html"><span class="sidebar-text">Password recover</span></a>
-                    </li>
-                    <li>
-                        <a href="lockscreen.html"><span class="sidebar-text">Lockscreen</span></a>
-                    </li>
-                    <li>
-                        <a href="session_timeout.html"><span class="sidebar-text">Session Timeout</span></a>
+                        <a href="#/profil"><span class="sidebar-text">User Profile</span></a>
                     </li>
                 </ul>
             </li>
@@ -49,8 +35,8 @@
         <div id="sidebar-charts">
             
         <div class="sidebar-footer clearfix">
-            <a class="pull-left" href="profil.html" rel="tooltip" data-placement="top" data-original-title="Settings"><i class="glyph-icon flaticon-settings21"></i></a>
-            <a class="pull-left toggle_fullscreen" href="#" rel="tooltip" data-placement="top" data-original-title="Fullscreen"><i class="glyph-icon flaticon-fullscreen3"></i></a>
+            <a class="pull-left" href="#/profil" rel="tooltip" data-placement="top" data-original-title="Settings"><i class="glyph-icon flaticon-settings21"></i></a>
+            <a class="pull-left toggle_fullscreen" href="" rel="tooltip" data-placement="top" data-original-title="Fullscreen"><i class="glyph-icon flaticon-fullscreen3"></i></a>
             <a class="pull-left" href="lockscreen.html" rel="tooltip" data-placement="top" data-original-title="Lockscreen"><i class="glyph-icon flaticon-padlock23"></i></a>
             <a class="pull-left" href="login.html" rel="tooltip" data-placement="top" data-original-title="Logout"><i class="fa fa-power-off"></i></a>
         </div> 
