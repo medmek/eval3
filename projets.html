@@ -3,120 +3,41 @@
         <h3><strong>Projets</strong> Sauvegardés </h3>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-md-6">
+        <div ng-repeat="projet in projets" class="col-lg-3 col-md-6">
             <div class="panel panel-icon no-bd  bg-dark hover-effect">
                 <div class="panel-body bg-dark">
+                	<a href="#/projets/{{projet.id}}">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="icon transparent-color"><i class="fa fa-briefcase"></i>
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="panel-footer bg-dark">
-                    <h4><strong>Projet N°1</strong></h4>
-                    <p>Afficher - Editer - Ajouter</p>
+                    <h4><strong>{{projet.name}}</strong></h4>
+                    <p><a href=""> Editer </a>-<a href=""> Supprimer </a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-icon no-bd  bg-dark hover-effect">
-                <div class="panel-body bg-dark">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="icon transparent-color"><i class="fa fa-briefcase"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer bg-dark">
-                    <h4><strong>Projet N°2</strong></h4>
-                    <p>Afficher - Editer - Ajouter</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-icon no-bd  bg-dark hover-effect">
-                <div class="panel-body bg-dark">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="icon transparent-color"><i class="fa fa-briefcase"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer bg-dark">
-                    <h4><strong>Projet N°3</strong></h4>
-                    <p>Afficher - Editer - Ajouter</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-icon no-bd  bg-dark hover-effect">
-                <div class="panel-body bg-dark">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="icon transparent-color"><i class="fa fa-briefcase"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer bg-dark">
-                    <h4><strong>Projet N°4</strong></h4>
-                    <p>Afficher - Editer - Ajouter</p>
-                </div>
-            </div>
-        </div>
-
+        
     </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-icon no-bd  bg-dark hover-effect">
-                <div class="panel-body bg-dark">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="icon transparent-color"><i class="fa fa-briefcase"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer bg-dark">
-                    <h4><strong>Projet N°5</strong></h4>
-                    <p>Afficher - Editer - Ajouter</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-icon no-bd bg-dark hover-effect">
-                <div class="panel-body  bg-dark">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="icon transparent-color"><i class="fa fa-briefcase"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer bg-dark">
-                    <h4><strong>Projet N°6</strong></h4>
-                    <p>Afficher - Editer - Ajouter</p>
-                </div>
-            </div>
-        </div>
+    
         <div class="col-lg-3 col-md-6">
             <div class="panel panel-icon no-bd bg-transparent">
                 <div class="panel-body bg-transparent">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="icon"><i class="fa fa-cloud-upload"></i>
+                            <div class="icon"><a href="#/projets/ajout"><i class="fa fa-cloud-upload"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <h4>Ajouter un Projet</h4>
-                    <p>Formulaire d'Ajout</p>
+                    <h4><a href="#/projets/ajout">Ajouter un Projet</a></h4>
                 </div>
             </div>
         </div>
-    </div>
+    
 </div>
