@@ -2,9 +2,14 @@
 
 var myApp = angular.module('myApp',['ngRoute']);
 
+myApp.controller('ProjetsCtrl',function($scope,$http,$rootScope){
+	$rootScope.title = "Tableau de Bord";
+	$http.get('listerProjetsTab').success(function(data){
+		$scope.projets=data;
+	});
+	});
 myApp.controller('MainCtrl', function($rootScope){
     //code
-     $rootScope.title = "Accueil";
 
 });
 
@@ -13,14 +18,23 @@ myApp.controller('AccueilCtrl', function($rootScope){
     
 });
 
-myApp.controller('ProjetsCtrl', function($rootScope){
+/*myApp.controller('ProjetsCtrl', function($rootScope){
     $rootScope.title = "Tableau de Bord";
     
-});
+});*/
 
 myApp.controller('AjoutCtrl', function($rootScope){
     $rootScope.title = "Import de Projet";
     
+});
+
+myApp.controller('AfficheCtrl', function($rootScope,$scope,$http,$routeParams){
+	$rootScope.Id=$routeParams.projetId;
+    $rootScope.title = "projet "+$scope.Id;
+    $scope.Id=$rootScope.Id;
+    $http.get('folder?id='+$scope.Id).success(function(data){
+		$scope.reports=data;
+	});
 });
 
 myApp.config( function( $routeProvider ) {
@@ -38,7 +52,11 @@ myApp.config( function( $routeProvider ) {
 						templateUrl : 'projets_ajout.html',
                 		controller  : 'AjoutCtrl'
 
-	})
+	}).when('/projets/:projetId', {
+		templateUrl : 'project/afficheProjet.html',
+		controller  : 'AfficheCtrl'
+
+})
 	.when('/profil', {
 						templateUrl : 'profil.html',
                 		controller  : 'ProjetsCtrl'
